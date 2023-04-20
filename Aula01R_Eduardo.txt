@@ -1,0 +1,504 @@
+
+R version 4.2.3 (2023-03-15) -- "Shortstop Beagle"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> install.packages("dplyr")
+Installing package into ‘/cloud/lib/x86_64-pc-linux-gnu-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'http://rspm/default/__linux__/focal/latest/src/contrib/dplyr_1.1.1.tar.gz'
+Content type 'application/x-gzip' length 1452270 bytes (1.4 MB)
+==================================================
+downloaded 1.4 MB
+
+* installing *binary* package ‘dplyr’ ...
+* DONE (dplyr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpBcpowL/downloaded_packages’
+> install.packages("lubridate")
+Installing package into ‘/cloud/lib/x86_64-pc-linux-gnu-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'http://rspm/default/__linux__/focal/latest/src/contrib/lubridate_1.9.2.tar.gz'
+Content type 'application/x-gzip' length 966991 bytes (944 KB)
+==================================================
+downloaded 944 KB
+
+* installing *binary* package ‘lubridate’ ...
+* DONE (lubridate)
+
+The downloaded source packages are in
+	‘/tmp/RtmpBcpowL/downloaded_packages’
+> install.packages("stringr")
+Installing package into ‘/cloud/lib/x86_64-pc-linux-gnu-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'http://rspm/default/__linux__/focal/latest/src/contrib/stringr_1.5.0.tar.gz'
+Content type 'application/x-gzip' length 301376 bytes (294 KB)
+==================================================
+downloaded 294 KB
+
+* installing *binary* package ‘stringr’ ...
+* DONE (stringr)
+
+The downloaded source packages are in
+	‘/tmp/RtmpBcpowL/downloaded_packages’
+> library(dplyr)
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+> library(dplyr)
+> library(lubridate)
+
+Attaching package: ‘lubridate’
+
+The following objects are masked from ‘package:base’:
+
+    date, intersect, setdiff, union
+#? Comentários com "?" são comentários normais
+#! Comentários com "!" são códigos errados
+#* Comentários com "*" são para correções
+# Apenas "#" são códigos comentados (ignorados)
+
+#TODO é algo para fazermos juntos
+
+#? Vamos adicionar a biblioteca dplyr 
+
+library(dplyr)
+
+
+#? E outras bibliotecas que serão úteis
+library(lubridate)
+library(stringr)
+
+#? Vamos começar com os dados de pokemon
+#? 
+https://www.kaggle.com/datasets/igorcoelho24/pokemon-all-generations/versions/1?resource=download
+dados 
+<- read.csv("Dados/Pokemon_full.csv")
+head(dados) 
+
+#? vê as primeiras linhas de dados
+
+> dados <- read.csv("Dados/Pokemon_full.csv")
+> head(dados) 
+        name pokedex.id height weight  type secundary.type hp attack
+1  bulbasaur          1      7     69 grass         poison 45     49
+2    ivysaur          2     10    130 grass         poison 60     62
+3   venusaur          3     20   1000 grass         poison 80     82
+4 charmander          4      6     85  fire           None 39     52
+5 charmeleon          5     11    190  fire           None 58     64
+6  charizard          6     17    905  fire         flying 78     84
+  defense sp.atk sp.def speed
+1      49     65     65    45
+2      63     80     80    60
+3      83    100    100    80
+4      43     60     50    65
+5      58     80     65    80
+6      78    109     85   100
+> nrow(dados)
+[1] 890
+> dados %>% nrow()
+[1] 890
+> dados %>% nrow(.)
+[1] 890
+> 
+> grepl("ap", "apple")
+[1] TRUE
+> grepl("apple", "ap")
+[1] FALSE
+> 
+> x <- "apple"
+> 
+> x %>% grepl("ap", .)
+[1] TRUE
+> x %>% grepl("ap")
+[1] FALSE
+> df_grass <- filter(dados, type == "grass")
+> df_grass
+           name pokedex.id height weight  type secundary.type  hp attack
+1     bulbasaur          1      7     69 grass         poison  45     49
+2       ivysaur          2     10    130 grass         poison  60     62
+3      venusaur          3     20   1000 grass         poison  80     82
+4        oddish         43      5     54 grass         poison  45     50
+5         gloom         44      8     86 grass         poison  60     65
+6     vileplume         45     12    186 grass         poison  75     80
+7    bellsprout         69      7     40 grass         poison  50     75
+8    weepinbell         70     10     64 grass         poison  65     90
+9    victreebel         71     17    155 grass         poison  80    105
+10    exeggcute        102      4     25 grass        psychic  60     40
+11    exeggutor        103     20   1200 grass        psychic  95     95
+12      tangela        114     10    350 grass           None  65     55
+13    chikorita        152      9     64 grass           None  45     49
+14      bayleef        153     12    158 grass           None  60     62
+15     meganium        154     18   1005 grass           None  80     82
+16    bellossom        182      4     58 grass           None  75     80
+17       hoppip        187      4      5 grass         flying  35     35
+18     skiploom        188      6     10 grass         flying  55     45
+19     jumpluff        189      8     30 grass         flying  75     55
+20      sunkern        191      3     18 grass           None  30     30
+21     sunflora        192      8     85 grass           None  75     75
+22      treecko        252      5     50 grass           None  40     45
+23      grovyle        253      9    216 grass           None  50     65
+24     sceptile        254     17    522 grass           None  70     85
+25       seedot        273      5     40 grass           None  40     40
+26      nuzleaf        274     10    280 grass           dark  70     70
+27      shiftry        275     13    596 grass           dark  90    100
+28    shroomish        285      4     45 grass           None  60     40
+29      breloom        286     12    392 grass       fighting  60    130
+30      roselia        315      3     20 grass         poison  50     60
+31       cacnea        331      4    513 grass           None  50     85
+32     cacturne        332     13    774 grass           dark  70    115
+33      tropius        357     20   1000 grass         flying  99     68
+34      turtwig        387      4    102 grass           None  55     68
+35       grotle        388     11    970 grass           None  75     89
+36     torterra        389     22   3100 grass         ground  95    109
+37        budew        406      2     12 grass         poison  40     30
+38     roserade        407      9    145 grass         poison  60     70
+39      cherubi        420      4     33 grass           None  45     35
+40      cherrim        421      5     93 grass           None  70     60
+41    carnivine        455     14    270 grass           None  74    100
+42       snover        459     10    505 grass            ice  60     62
+43    abomasnow        460     22   1355 grass            ice  90     92
+44    tangrowth        465     20   1286 grass           None 100    100
+45      leafeon        470     10    255 grass           None  65    110
+46 shaymin-land        492      2     21 grass           None 100    100
+47        snivy        495      6     81 grass           None  45     45
+48      servine        496      8    160 grass           None  60     60
+49    serperior        497     33    630 grass           None  75     75
+50      pansage        511      6    105 grass           None  50     53
+51     simisage        512     11    305 grass           None  75     98
+52     cottonee        546      3      6 grass          fairy  40     27
+53   whimsicott        547      7     66 grass          fairy  60     67
+54      petilil        548      5     66 grass           None  45     35
+55    lilligant        549     11    163 grass           None  70     60
+56     maractus        556     10    280 grass           None  75     86
+57      foongus        590      2     10 grass         poison  69     55
+58    amoonguss        591      6    105 grass         poison 114     85
+59    ferroseed        597      6    188 grass          steel  44     50
+60   ferrothorn        598     10   1100 grass          steel  74     94
+61     virizion        640     20   2000 grass       fighting  91     90
+62      chespin        650      4     90 grass           None  56     61
+63    quilladin        651      7    290 grass           None  61     78
+64   chesnaught        652     16    900 grass       fighting  88    107
+65       skiddo        672      9    310 grass           None  66     65
+66       gogoat        673     17    910 grass           None 123    100
+67       rowlet        722      3     15 grass         flying  68     55
+68      dartrix        723      7    160 grass         flying  78     75
+69    decidueye        724     16    366 grass          ghost  78    107
+70     fomantis        753      3     15 grass           None  40     55
+71     lurantis        754      9    185 grass           None  70    105
+72     morelull        755      2     15 grass          fairy  40     35
+73    shiinotic        756     10    115 grass          fairy  60     45
+74    bounsweet        761      3     32 grass           None  42     30
+75      steenee        762      7     82 grass           None  52     40
+76     tsareena        763     12    214 grass           None  72    120
+77    tapu-bulu        787     19    455 grass          fairy  70    130
+78      kartana        798      3      1 grass          steel  59    181
+79      grookey        810      3     50 grass           None  50     65
+80     thwackey        811      7    140 grass           None  70     85
+81    rillaboom        812     21    900 grass           None 100    125
+82   gossifleur        829      4     22 grass           None  40     40
+83     eldegoss        830      5     25 grass           None  60     50
+   defense sp.atk sp.def speed
+1       49     65     65    45
+2       63     80     80    60
+3       83    100    100    80
+4       55     75     65    30
+5       70     85     75    40
+6       85    110     90    50
+7       35     70     30    40
+8       50     85     45    55
+9       65    100     70    70
+10      80     60     45    40
+11      85    125     75    55
+12     115    100     40    60
+13      65     49     65    45
+14      80     63     80    60
+15     100     83    100    80
+16      95     90    100    50
+17      40     35     55    50
+18      50     45     65    80
+19      70     55     95   110
+20      30     30     30    30
+21      55    105     85    30
+22      35     65     55    70
+23      45     85     65    95
+24      65    105     85   120
+25      50     30     30    30
+26      40     60     40    60
+27      60     90     60    80
+28      60     40     60    35
+29      80     60     60    70
+30      45    100     80    65
+31      40     85     40    35
+32      60    115     60    55
+33      83     72     87    51
+34      64     45     55    31
+35      85     55     65    36
+36     105     75     85    56
+37      35     50     70    55
+38      65    125    105    90
+39      45     62     53    35
+40      70     87     78    85
+41      72     90     72    46
+42      50     62     60    40
+43      75     92     85    60
+44     125    110     50    50
+45     130     60     65    95
+46     100    100    100   100
+47      55     45     55    63
+48      75     60     75    83
+49      95     75     95   113
+50      48     53     48    64
+51      63     98     63   101
+52      60     37     50    66
+53      85     77     75   116
+54      50     70     50    30
+55      75    110     75    90
+56      67    106     67    60
+57      45     55     55    15
+58      70     85     80    30
+59      91     24     86    10
+60     131     54    116    20
+61      72     90    129   108
+62      65     48     45    38
+63      95     56     58    57
+64     122     74     75    64
+65      48     62     57    52
+66      62     97     81    68
+67      55     50     50    42
+68      75     70     70    52
+69      75    100    100    70
+70      35     50     35    35
+71      90     80     90    45
+72      55     65     75    15
+73      80     90    100    30
+74      38     30     38    32
+75      48     40     48    62
+76      98     50     98    72
+77     115     85     95    75
+78     131     59     31   109
+79      50     40     40    65
+80      70     55     60    80
+81      90     60     70    85
+82      60     40     60    10
+83      90     80    120    60
+ [ reached 'max' / getOption("max.print") -- omitted 3 rows ]
+> dados %>% filter(type == "grass")
+           name pokedex.id height weight  type secundary.type  hp attack
+1     bulbasaur          1      7     69 grass         poison  45     49
+2       ivysaur          2     10    130 grass         poison  60     62
+3      venusaur          3     20   1000 grass         poison  80     82
+4        oddish         43      5     54 grass         poison  45     50
+5         gloom         44      8     86 grass         poison  60     65
+6     vileplume         45     12    186 grass         poison  75     80
+7    bellsprout         69      7     40 grass         poison  50     75
+8    weepinbell         70     10     64 grass         poison  65     90
+9    victreebel         71     17    155 grass         poison  80    105
+10    exeggcute        102      4     25 grass        psychic  60     40
+11    exeggutor        103     20   1200 grass        psychic  95     95
+12      tangela        114     10    350 grass           None  65     55
+13    chikorita        152      9     64 grass           None  45     49
+14      bayleef        153     12    158 grass           None  60     62
+15     meganium        154     18   1005 grass           None  80     82
+16    bellossom        182      4     58 grass           None  75     80
+17       hoppip        187      4      5 grass         flying  35     35
+18     skiploom        188      6     10 grass         flying  55     45
+19     jumpluff        189      8     30 grass         flying  75     55
+20      sunkern        191      3     18 grass           None  30     30
+21     sunflora        192      8     85 grass           None  75     75
+22      treecko        252      5     50 grass           None  40     45
+23      grovyle        253      9    216 grass           None  50     65
+24     sceptile        254     17    522 grass           None  70     85
+25       seedot        273      5     40 grass           None  40     40
+26      nuzleaf        274     10    280 grass           dark  70     70
+27      shiftry        275     13    596 grass           dark  90    100
+28    shroomish        285      4     45 grass           None  60     40
+29      breloom        286     12    392 grass       fighting  60    130
+30      roselia        315      3     20 grass         poison  50     60
+31       cacnea        331      4    513 grass           None  50     85
+32     cacturne        332     13    774 grass           dark  70    115
+33      tropius        357     20   1000 grass         flying  99     68
+34      turtwig        387      4    102 grass           None  55     68
+35       grotle        388     11    970 grass           None  75     89
+36     torterra        389     22   3100 grass         ground  95    109
+37        budew        406      2     12 grass         poison  40     30
+38     roserade        407      9    145 grass         poison  60     70
+39      cherubi        420      4     33 grass           None  45     35
+40      cherrim        421      5     93 grass           None  70     60
+41    carnivine        455     14    270 grass           None  74    100
+42       snover        459     10    505 grass            ice  60     62
+43    abomasnow        460     22   1355 grass            ice  90     92
+44    tangrowth        465     20   1286 grass           None 100    100
+45      leafeon        470     10    255 grass           None  65    110
+46 shaymin-land        492      2     21 grass           None 100    100
+47        snivy        495      6     81 grass           None  45     45
+48      servine        496      8    160 grass           None  60     60
+49    serperior        497     33    630 grass           None  75     75
+50      pansage        511      6    105 grass           None  50     53
+51     simisage        512     11    305 grass           None  75     98
+52     cottonee        546      3      6 grass          fairy  40     27
+53   whimsicott        547      7     66 grass          fairy  60     67
+54      petilil        548      5     66 grass           None  45     35
+55    lilligant        549     11    163 grass           None  70     60
+56     maractus        556     10    280 grass           None  75     86
+57      foongus        590      2     10 grass         poison  69     55
+58    amoonguss        591      6    105 grass         poison 114     85
+59    ferroseed        597      6    188 grass          steel  44     50
+60   ferrothorn        598     10   1100 grass          steel  74     94
+61     virizion        640     20   2000 grass       fighting  91     90
+62      chespin        650      4     90 grass           None  56     61
+63    quilladin        651      7    290 grass           None  61     78
+64   chesnaught        652     16    900 grass       fighting  88    107
+65       skiddo        672      9    310 grass           None  66     65
+66       gogoat        673     17    910 grass           None 123    100
+67       rowlet        722      3     15 grass         flying  68     55
+68      dartrix        723      7    160 grass         flying  78     75
+69    decidueye        724     16    366 grass          ghost  78    107
+70     fomantis        753      3     15 grass           None  40     55
+71     lurantis        754      9    185 grass           None  70    105
+72     morelull        755      2     15 grass          fairy  40     35
+73    shiinotic        756     10    115 grass          fairy  60     45
+74    bounsweet        761      3     32 grass           None  42     30
+75      steenee        762      7     82 grass           None  52     40
+76     tsareena        763     12    214 grass           None  72    120
+77    tapu-bulu        787     19    455 grass          fairy  70    130
+78      kartana        798      3      1 grass          steel  59    181
+79      grookey        810      3     50 grass           None  50     65
+80     thwackey        811      7    140 grass           None  70     85
+81    rillaboom        812     21    900 grass           None 100    125
+82   gossifleur        829      4     22 grass           None  40     40
+83     eldegoss        830      5     25 grass           None  60     50
+   defense sp.atk sp.def speed
+1       49     65     65    45
+2       63     80     80    60
+3       83    100    100    80
+4       55     75     65    30
+5       70     85     75    40
+6       85    110     90    50
+7       35     70     30    40
+8       50     85     45    55
+9       65    100     70    70
+10      80     60     45    40
+11      85    125     75    55
+12     115    100     40    60
+13      65     49     65    45
+14      80     63     80    60
+15     100     83    100    80
+16      95     90    100    50
+17      40     35     55    50
+18      50     45     65    80
+19      70     55     95   110
+20      30     30     30    30
+21      55    105     85    30
+22      35     65     55    70
+23      45     85     65    95
+24      65    105     85   120
+25      50     30     30    30
+26      40     60     40    60
+27      60     90     60    80
+28      60     40     60    35
+29      80     60     60    70
+30      45    100     80    65
+31      40     85     40    35
+32      60    115     60    55
+33      83     72     87    51
+34      64     45     55    31
+35      85     55     65    36
+36     105     75     85    56
+37      35     50     70    55
+38      65    125    105    90
+39      45     62     53    35
+40      70     87     78    85
+41      72     90     72    46
+42      50     62     60    40
+43      75     92     85    60
+44     125    110     50    50
+45     130     60     65    95
+46     100    100    100   100
+47      55     45     55    63
+48      75     60     75    83
+49      95     75     95   113
+50      48     53     48    64
+51      63     98     63   101
+52      60     37     50    66
+53      85     77     75   116
+54      50     70     50    30
+55      75    110     75    90
+56      67    106     67    60
+57      45     55     55    15
+58      70     85     80    30
+59      91     24     86    10
+60     131     54    116    20
+61      72     90    129   108
+62      65     48     45    38
+63      95     56     58    57
+64     122     74     75    64
+65      48     62     57    52
+66      62     97     81    68
+67      55     50     50    42
+68      75     70     70    52
+69      75    100    100    70
+70      35     50     35    35
+71      90     80     90    45
+72      55     65     75    15
+73      80     90    100    30
+74      38     30     38    32
+75      48     40     48    62
+76      98     50     98    72
+77     115     85     95    75
+78     131     59     31   109
+79      50     40     40    65
+80      70     55     60    80
+81      90     60     70    85
+82      60     40     60    10
+83      90     80    120    60
+ [ reached 'max' / getOption("max.print") -- omitted 3 rows ]
+> df_fogo_e_agua <- dados %>% filter(type == "fire" | type == "water")
+> dados %>% filter(grepl("fly", name))
+       name pokedex.id height weight   type secundary.type hp attack
+1 beautifly        267     10    284    bug         flying 60     70
+2    flygon        330     20    820 ground         dragon 80    100
+3  cutiefly        742      1      2    bug          fairy 40     45
+  defense sp.atk sp.def speed
+1      50    100     50    65
+2      80     80     80   100
+3      40     55     40    84
+> dados %>% filter(grepl("fly", name))
+       name pokedex.id height weight   type secundary.type hp attack
+1 beautifly        267     10    284    bug         flying 60     70
+2    flygon        330     20    820 ground         dragon 80    100
+3  cutiefly        742      1      2    bug          fairy 40     45
+  defense sp.atk sp.def speed
+1      50    100     50    65
+2      80     80     80   100
+3      40     55     40    84
+> dados %>% filter(grepl("saur", name))
+       name pokedex.id height weight  type secundary.type hp attack
+1 bulbasaur          1      7     69 grass         poison 45     49
+2   ivysaur          2     10    130 grass         poison 60     62
+3  venusaur          3     20   1000 grass         poison 80     82
+  defense sp.atk sp.def speed
+1      49     65     65    45
+2      63     80     80    60
+3      83    100    100    80
