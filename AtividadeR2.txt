@@ -1,0 +1,1369 @@
+dados %>% select(name, type, height)
+          name     type height
+1    bulbasaur    grass      7
+2      ivysaur    grass     10
+3     venusaur    grass     20
+4   charmander     fire      6
+5   charmeleon     fire     11
+6    charizard     fire     17
+7     squirtle    water      5
+8    wartortle    water     10
+9    blastoise    water     16
+10    caterpie      bug      3
+11     metapod      bug      7
+12  butterfree      bug     11
+13      weedle      bug      3
+14      kakuna      bug      6
+15    beedrill      bug     10
+16      pidgey   normal      3
+17   pidgeotto   normal     11
+18     pidgeot   normal     15
+19     rattata   normal      3
+20    raticate   normal      7
+21     spearow   normal      3
+22      fearow   normal     12
+23       ekans   poison     20
+24       arbok   poison     35
+25     pikachu electric      4
+26      raichu electric      8
+27   sandshrew   ground      6
+28   sandslash   ground     10
+29   nidoran-f   poison      4
+30    nidorina   poison      8
+31   nidoqueen   poison     13
+32   nidoran-m   poison      5
+33    nidorino   poison      9
+34    nidoking   poison     14
+35    clefairy    fairy      6
+36    clefable    fairy     13
+37      vulpix     fire      6
+38   ninetales     fire     11
+39  jigglypuff   normal      5
+40  wigglytuff   normal     10
+41       zubat   poison      8
+42      golbat   poison     16
+43      oddish    grass      5
+44       gloom    grass      8
+45   vileplume    grass     12
+46       paras      bug      3
+47    parasect      bug     10
+48     venonat      bug     10
+49    venomoth      bug     15
+50     diglett   ground      2
+51     dugtrio   ground      7
+52      meowth   normal      4
+53     persian   normal     10
+54     psyduck    water      8
+55     golduck    water     17
+56      mankey fighting      5
+57    primeape fighting     10
+58   growlithe     fire      7
+59    arcanine     fire     19
+60     poliwag    water      6
+61   poliwhirl    water     10
+62   poliwrath    water     13
+63        abra  psychic      9
+64     kadabra  psychic     13
+65    alakazam  psychic     15
+66      machop fighting      8
+67     machoke fighting     15
+68     machamp fighting     16
+69  bellsprout    grass      7
+70  weepinbell    grass     10
+71  victreebel    grass     17
+72   tentacool    water      9
+73  tentacruel    water     16
+74     geodude     rock      4
+75    graveler     rock     10
+76       golem     rock     14
+77      ponyta     fire     10
+78    rapidash     fire     17
+79    slowpoke    water     12
+80     slowbro    water     16
+81   magnemite electric      3
+82    magneton electric     10
+83   farfetchd   normal      8
+84       doduo   normal     14
+85      dodrio   normal     18
+86        seel    water     11
+87     dewgong    water     17
+88      grimer   poison      9
+89         muk   poison     12
+90    shellder    water      3
+91    cloyster    water     15
+92      gastly    ghost     13
+93     haunter    ghost     16
+94      gengar    ghost     15
+95        onix     rock     88
+96     drowzee  psychic     10
+97       hypno  psychic     16
+98      krabby    water      4
+99     kingler    water     13
+100    voltorb electric      5
+101  electrode electric     12
+102  exeggcute    grass      4
+103  exeggutor    grass     20
+104     cubone   ground      4
+105    marowak   ground     10
+106  hitmonlee fighting     15
+107 hitmonchan fighting     14
+108  lickitung   normal     12
+109    koffing   poison      6
+110    weezing   poison     12
+111    rhyhorn   ground     10
+112     rhydon   ground     19
+113    chansey   normal     11
+114    tangela    grass     10
+115 kangaskhan   normal     22
+116     horsea    water      4
+117     seadra    water     12
+118    goldeen    water      6
+119    seaking    water     13
+120     staryu    water      8
+121    starmie    water     11
+122    mr-mime  psychic     13
+123    scyther      bug     15
+124       jynx      ice     14
+125 electabuzz electric     11
+126     magmar     fire     13
+127     pinsir      bug     15
+128     tauros   normal     14
+129   magikarp    water      9
+130   gyarados    water     65
+131     lapras    water     25
+132      ditto   normal      3
+133      eevee   normal      3
+134   vaporeon    water     10
+135    jolteon electric      8
+136    flareon     fire      9
+137    porygon   normal      8
+138    omanyte     rock      4
+139    omastar     rock     10
+140     kabuto     rock      5
+141   kabutops     rock     13
+142 aerodactyl     rock     18
+143    snorlax   normal     21
+144   articuno      ice     17
+145     zapdos electric     16
+146    moltres     fire     20
+147    dratini   dragon     18
+148  dragonair   dragon     40
+149  dragonite   dragon     22
+150     mewtwo  psychic     20
+151        mew  psychic      4
+152  chikorita    grass      9
+153    bayleef    grass     12
+154   meganium    grass     18
+155  cyndaquil     fire      5
+156    quilava     fire      9
+157 typhlosion     fire     17
+158   totodile    water      6
+159   croconaw    water     11
+160 feraligatr    water     23
+161    sentret   normal      8
+162     furret   normal     18
+163   hoothoot   normal      7
+164    noctowl   normal     16
+165     ledyba      bug     10
+166     ledian      bug     14
+167   spinarak      bug      5
+168    ariados      bug     11
+169     crobat   poison     18
+170   chinchou    water      5
+171    lanturn    water     12
+172      pichu electric      3
+173     cleffa    fairy      3
+174  igglybuff   normal      3
+175     togepi    fairy      3
+176    togetic    fairy      6
+177       natu  psychic      2
+178       xatu  psychic     15
+179     mareep electric      6
+180    flaaffy electric      8
+181   ampharos electric     14
+182  bellossom    grass      4
+183     marill    water      4
+184  azumarill    water      8
+185  sudowoodo     rock     12
+186   politoed    water     11
+187     hoppip    grass      4
+188   skiploom    grass      6
+189   jumpluff    grass      8
+190      aipom   normal      8
+191    sunkern    grass      3
+192   sunflora    grass      8
+193      yanma      bug     12
+194     wooper    water      4
+195   quagsire    water     14
+196     espeon  psychic      9
+197    umbreon     dark     10
+198    murkrow     dark      5
+199   slowking    water     20
+200 misdreavus    ghost      7
+201      unown  psychic      5
+202  wobbuffet  psychic     13
+203  girafarig   normal     15
+204     pineco      bug      6
+205 forretress      bug     12
+206  dunsparce   normal     15
+207     gligar   ground     11
+208    steelix    steel     92
+209   snubbull    fairy      6
+210   granbull    fairy     14
+211   qwilfish    water      5
+212     scizor      bug     18
+213    shuckle      bug      6
+214  heracross      bug     15
+215    sneasel     dark      9
+216  teddiursa   normal      6
+217   ursaring   normal     18
+218     slugma     fire      7
+219   magcargo     fire      8
+220     swinub      ice      4
+221  piloswine      ice     11
+222    corsola    water      6
+223   remoraid    water      6
+224  octillery    water      9
+225   delibird      ice      9
+226    mantine    water     21
+227   skarmory    steel     17
+228   houndour     dark      6
+229   houndoom     dark     14
+230    kingdra    water     18
+231     phanpy   ground      5
+232    donphan   ground     11
+233   porygon2   normal      6
+234   stantler   normal     14
+235   smeargle   normal     12
+236    tyrogue fighting      7
+237  hitmontop fighting     14
+238   smoochum      ice      4
+239     elekid electric      6
+240      magby     fire      7
+241    miltank   normal     12
+242    blissey   normal     15
+243     raikou electric     19
+244      entei     fire     21
+245    suicune    water     20
+246   larvitar     rock      6
+247    pupitar     rock     12
+248  tyranitar     rock     20
+249      lugia  psychic     52
+250      ho-oh     fire     38
+251     celebi  psychic      6
+252    treecko    grass      5
+253    grovyle    grass      9
+254   sceptile    grass     17
+255    torchic     fire      4
+256  combusken     fire      9
+257   blaziken     fire     19
+258     mudkip    water      4
+259  marshtomp    water      7
+260   swampert    water     15
+261  poochyena     dark      5
+262  mightyena     dark     10
+263  zigzagoon   normal      4
+264    linoone   normal      5
+265    wurmple      bug      3
+266    silcoon      bug      6
+267  beautifly      bug     10
+268    cascoon      bug      7
+269     dustox      bug     12
+270      lotad    water      5
+271     lombre    water     12
+272   ludicolo    water     15
+273     seedot    grass      5
+274    nuzleaf    grass     10
+275    shiftry    grass     13
+276    taillow   normal      3
+277    swellow   normal      7
+278    wingull    water      6
+279   pelipper    water     12
+280      ralts  psychic      4
+281     kirlia  psychic      8
+282  gardevoir  psychic     16
+283    surskit      bug      5
+284 masquerain      bug      8
+285  shroomish    grass      4
+286    breloom    grass     12
+287    slakoth   normal      8
+288   vigoroth   normal     14
+289    slaking   normal     20
+290    nincada      bug      5
+291    ninjask      bug      8
+292   shedinja      bug      8
+293    whismur   normal      6
+294    loudred   normal     10
+295    exploud   normal     15
+296   makuhita fighting     10
+297   hariyama fighting     23
+298    azurill   normal      2
+299   nosepass     rock     10
+300     skitty   normal      6
+301   delcatty   normal     11
+302    sableye     dark      5
+303     mawile    steel      6
+304       aron    steel      4
+305     lairon    steel      9
+306     aggron    steel     21
+307   meditite fighting      6
+308   medicham fighting     13
+309  electrike electric      6
+310  manectric electric     15
+311     plusle electric      4
+312      minun electric      4
+313    volbeat      bug      7
+314   illumise      bug      6
+315    roselia    grass      3
+316     gulpin   poison      4
+317     swalot   poison     17
+318   carvanha    water      8
+319   sharpedo    water     18
+320    wailmer    water     20
+321    wailord    water    145
+322      numel     fire      7
+323   camerupt     fire     19
+324    torkoal     fire      5
+325     spoink  psychic      7
+326    grumpig  psychic      9
+327     spinda   normal     11
+328   trapinch   ground      7
+329    vibrava   ground     11
+330     flygon   ground     20
+331     cacnea    grass      4
+332   cacturne    grass     13
+333     swablu   normal      4
+ [ reached 'max' / getOption("max.print") -- omitted 557 rows ]
+> dados %>% names
+ [1] "name"           "pokedex.id"     "height"         "weight"        
+ [5] "type"           "secundary.type" "hp"             "attack"        
+ [9] "defense"        "sp.atk"         "sp.def"         "speed"         
+> dados %>%
++     select(starts_with("h")) %>% head
+  height hp
+1      7 45
+2     10 60
+3     20 80
+4      6 39
+5     11 58
+6     17 78
+> dados %>% select(-name) %>% head
+  pokedex.id height weight  type secundary.type hp attack defense sp.atk
+1          1      7     69 grass         poison 45     49      49     65
+2          2     10    130 grass         poison 60     62      63     80
+3          3     20   1000 grass         poison 80     82      83    100
+4          4      6     85  fire           None 39     52      43     60
+5          5     11    190  fire           None 58     64      58     80
+6          6     17    905  fire         flying 78     84      78    109
+  sp.def speed
+1     65    45
+2     80    60
+3    100    80
+4     50    65
+5     65    80
+6     85   100
+> df <--dados %>%select(height,weight, hp)
+Error in FUN(left) : invalid argument to unary operator
+> df <- dados %>%select(height,weight, hp)
+> df <- as.matrix(df)
+> View(df)
+> dados %>% 
++     mutate(
++         height2 = 2*height
++     )
+         name pokedex.id height weight     type secundary.type  hp
+1   bulbasaur          1      7     69    grass         poison  45
+2     ivysaur          2     10    130    grass         poison  60
+3    venusaur          3     20   1000    grass         poison  80
+4  charmander          4      6     85     fire           None  39
+5  charmeleon          5     11    190     fire           None  58
+6   charizard          6     17    905     fire         flying  78
+7    squirtle          7      5     90    water           None  44
+8   wartortle          8     10    225    water           None  59
+9   blastoise          9     16    855    water           None  79
+10   caterpie         10      3     29      bug           None  45
+11    metapod         11      7     99      bug           None  50
+12 butterfree         12     11    320      bug         flying  60
+13     weedle         13      3     32      bug         poison  40
+14     kakuna         14      6    100      bug         poison  45
+15   beedrill         15     10    295      bug         poison  65
+16     pidgey         16      3     18   normal         flying  40
+17  pidgeotto         17     11    300   normal         flying  63
+18    pidgeot         18     15    395   normal         flying  83
+19    rattata         19      3     35   normal           None  30
+20   raticate         20      7    185   normal           None  55
+21    spearow         21      3     20   normal         flying  40
+22     fearow         22     12    380   normal         flying  65
+23      ekans         23     20     69   poison           None  35
+24      arbok         24     35    650   poison           None  60
+25    pikachu         25      4     60 electric           None  35
+26     raichu         26      8    300 electric           None  60
+27  sandshrew         27      6    120   ground           None  50
+28  sandslash         28     10    295   ground           None  75
+29  nidoran-f         29      4     70   poison           None  55
+30   nidorina         30      8    200   poison           None  70
+31  nidoqueen         31     13    600   poison         ground  90
+32  nidoran-m         32      5     90   poison           None  46
+33   nidorino         33      9    195   poison           None  61
+34   nidoking         34     14    620   poison         ground  81
+35   clefairy         35      6     75    fairy           None  70
+36   clefable         36     13    400    fairy           None  95
+37     vulpix         37      6     99     fire           None  38
+38  ninetales         38     11    199     fire           None  73
+39 jigglypuff         39      5     55   normal          fairy 115
+40 wigglytuff         40     10    120   normal          fairy 140
+41      zubat         41      8     75   poison         flying  40
+42     golbat         42     16    550   poison         flying  75
+43     oddish         43      5     54    grass         poison  45
+44      gloom         44      8     86    grass         poison  60
+45  vileplume         45     12    186    grass         poison  75
+46      paras         46      3     54      bug          grass  35
+47   parasect         47     10    295      bug          grass  60
+48    venonat         48     10    300      bug         poison  60
+49   venomoth         49     15    125      bug         poison  70
+50    diglett         50      2      8   ground           None  10
+51    dugtrio         51      7    333   ground           None  35
+52     meowth         52      4     42   normal           None  40
+53    persian         53     10    320   normal           None  65
+54    psyduck         54      8    196    water           None  50
+55    golduck         55     17    766    water           None  80
+56     mankey         56      5    280 fighting           None  40
+57   primeape         57     10    320 fighting           None  65
+58  growlithe         58      7    190     fire           None  55
+59   arcanine         59     19   1550     fire           None  90
+60    poliwag         60      6    124    water           None  40
+61  poliwhirl         61     10    200    water           None  65
+62  poliwrath         62     13    540    water       fighting  90
+63       abra         63      9    195  psychic           None  25
+64    kadabra         64     13    565  psychic           None  40
+65   alakazam         65     15    480  psychic           None  55
+66     machop         66      8    195 fighting           None  70
+67    machoke         67     15    705 fighting           None  80
+68    machamp         68     16   1300 fighting           None  90
+69 bellsprout         69      7     40    grass         poison  50
+70 weepinbell         70     10     64    grass         poison  65
+71 victreebel         71     17    155    grass         poison  80
+72  tentacool         72      9    455    water         poison  40
+73 tentacruel         73     16    550    water         poison  80
+74    geodude         74      4    200     rock         ground  40
+75   graveler         75     10   1050     rock         ground  55
+76      golem         76     14   3000     rock         ground  80
+   attack defense sp.atk sp.def speed height2
+1      49      49     65     65    45      14
+2      62      63     80     80    60      20
+3      82      83    100    100    80      40
+4      52      43     60     50    65      12
+5      64      58     80     65    80      22
+6      84      78    109     85   100      34
+7      48      65     50     64    43      10
+8      63      80     65     80    58      20
+9      83     100     85    105    78      32
+10     30      35     20     20    45       6
+11     20      55     25     25    30      14
+12     45      50     90     80    70      22
+13     35      30     20     20    50       6
+14     25      50     25     25    35      12
+15     90      40     45     80    75      20
+16     45      40     35     35    56       6
+17     60      55     50     50    71      22
+18     80      75     70     70   101      30
+19     56      35     25     35    72       6
+20     81      60     50     70    97      14
+21     60      30     31     31    70       6
+22     90      65     61     61   100      24
+23     60      44     40     54    55      40
+24     95      69     65     79    80      70
+25     55      40     50     50    90       8
+26     90      55     90     80   110      16
+27     75      85     20     30    40      12
+28    100     110     45     55    65      20
+29     47      52     40     40    41       8
+30     62      67     55     55    56      16
+31     92      87     75     85    76      26
+32     57      40     40     40    50      10
+33     72      57     55     55    65      18
+34    102      77     85     75    85      28
+35     45      48     60     65    35      12
+36     70      73     95     90    60      26
+37     41      40     50     65    65      12
+38     76      75     81    100   100      22
+39     45      20     45     25    20      10
+40     70      45     85     50    45      20
+41     45      35     30     40    55      16
+42     80      70     65     75    90      32
+43     50      55     75     65    30      10
+44     65      70     85     75    40      16
+45     80      85    110     90    50      24
+46     70      55     45     55    25       6
+47     95      80     60     80    30      20
+48     55      50     40     55    45      20
+49     65      60     90     75    90      30
+50     55      25     35     45    95       4
+51    100      50     50     70   120      14
+52     45      35     40     40    90       8
+53     70      60     65     65   115      20
+54     52      48     65     50    55      16
+55     82      78     95     80    85      34
+56     80      35     35     45    70      10
+57    105      60     60     70    95      20
+58     70      45     70     50    60      14
+59    110      80    100     80    95      38
+60     50      40     40     40    90      12
+61     65      65     50     50    90      20
+62     95      95     70     90    70      26
+63     20      15    105     55    90      18
+64     35      30    120     70   105      26
+65     50      45    135     95   120      30
+66     80      50     35     35    35      16
+67    100      70     50     60    45      30
+68    130      80     65     85    55      32
+69     75      35     70     30    40      14
+70     90      50     85     45    55      20
+71    105      65    100     70    70      34
+72     40      35     50    100    70      18
+73     70      65     80    120   100      32
+74     80     100     30     30    20       8
+75     95     115     45     45    35      20
+76    120     130     55     65    45      28
+ [ reached 'max' / getOption("max.print") -- omitted 814 rows ]
+> dados %>% 
++     mutate(
++         height2 = 2*height
++     )
+         name pokedex.id height weight     type secundary.type  hp
+1   bulbasaur          1      7     69    grass         poison  45
+2     ivysaur          2     10    130    grass         poison  60
+3    venusaur          3     20   1000    grass         poison  80
+4  charmander          4      6     85     fire           None  39
+5  charmeleon          5     11    190     fire           None  58
+6   charizard          6     17    905     fire         flying  78
+7    squirtle          7      5     90    water           None  44
+8   wartortle          8     10    225    water           None  59
+9   blastoise          9     16    855    water           None  79
+10   caterpie         10      3     29      bug           None  45
+11    metapod         11      7     99      bug           None  50
+12 butterfree         12     11    320      bug         flying  60
+13     weedle         13      3     32      bug         poison  40
+14     kakuna         14      6    100      bug         poison  45
+15   beedrill         15     10    295      bug         poison  65
+16     pidgey         16      3     18   normal         flying  40
+17  pidgeotto         17     11    300   normal         flying  63
+18    pidgeot         18     15    395   normal         flying  83
+19    rattata         19      3     35   normal           None  30
+20   raticate         20      7    185   normal           None  55
+21    spearow         21      3     20   normal         flying  40
+22     fearow         22     12    380   normal         flying  65
+23      ekans         23     20     69   poison           None  35
+24      arbok         24     35    650   poison           None  60
+25    pikachu         25      4     60 electric           None  35
+26     raichu         26      8    300 electric           None  60
+27  sandshrew         27      6    120   ground           None  50
+28  sandslash         28     10    295   ground           None  75
+29  nidoran-f         29      4     70   poison           None  55
+30   nidorina         30      8    200   poison           None  70
+31  nidoqueen         31     13    600   poison         ground  90
+32  nidoran-m         32      5     90   poison           None  46
+33   nidorino         33      9    195   poison           None  61
+34   nidoking         34     14    620   poison         ground  81
+35   clefairy         35      6     75    fairy           None  70
+36   clefable         36     13    400    fairy           None  95
+37     vulpix         37      6     99     fire           None  38
+38  ninetales         38     11    199     fire           None  73
+39 jigglypuff         39      5     55   normal          fairy 115
+40 wigglytuff         40     10    120   normal          fairy 140
+41      zubat         41      8     75   poison         flying  40
+42     golbat         42     16    550   poison         flying  75
+43     oddish         43      5     54    grass         poison  45
+44      gloom         44      8     86    grass         poison  60
+45  vileplume         45     12    186    grass         poison  75
+46      paras         46      3     54      bug          grass  35
+47   parasect         47     10    295      bug          grass  60
+48    venonat         48     10    300      bug         poison  60
+49   venomoth         49     15    125      bug         poison  70
+50    diglett         50      2      8   ground           None  10
+51    dugtrio         51      7    333   ground           None  35
+52     meowth         52      4     42   normal           None  40
+53    persian         53     10    320   normal           None  65
+54    psyduck         54      8    196    water           None  50
+55    golduck         55     17    766    water           None  80
+56     mankey         56      5    280 fighting           None  40
+57   primeape         57     10    320 fighting           None  65
+58  growlithe         58      7    190     fire           None  55
+59   arcanine         59     19   1550     fire           None  90
+60    poliwag         60      6    124    water           None  40
+61  poliwhirl         61     10    200    water           None  65
+62  poliwrath         62     13    540    water       fighting  90
+63       abra         63      9    195  psychic           None  25
+64    kadabra         64     13    565  psychic           None  40
+65   alakazam         65     15    480  psychic           None  55
+66     machop         66      8    195 fighting           None  70
+67    machoke         67     15    705 fighting           None  80
+68    machamp         68     16   1300 fighting           None  90
+69 bellsprout         69      7     40    grass         poison  50
+70 weepinbell         70     10     64    grass         poison  65
+71 victreebel         71     17    155    grass         poison  80
+72  tentacool         72      9    455    water         poison  40
+73 tentacruel         73     16    550    water         poison  80
+74    geodude         74      4    200     rock         ground  40
+75   graveler         75     10   1050     rock         ground  55
+76      golem         76     14   3000     rock         ground  80
+   attack defense sp.atk sp.def speed height2
+1      49      49     65     65    45      14
+2      62      63     80     80    60      20
+3      82      83    100    100    80      40
+4      52      43     60     50    65      12
+5      64      58     80     65    80      22
+6      84      78    109     85   100      34
+7      48      65     50     64    43      10
+8      63      80     65     80    58      20
+9      83     100     85    105    78      32
+10     30      35     20     20    45       6
+11     20      55     25     25    30      14
+12     45      50     90     80    70      22
+13     35      30     20     20    50       6
+14     25      50     25     25    35      12
+15     90      40     45     80    75      20
+16     45      40     35     35    56       6
+17     60      55     50     50    71      22
+18     80      75     70     70   101      30
+19     56      35     25     35    72       6
+20     81      60     50     70    97      14
+21     60      30     31     31    70       6
+22     90      65     61     61   100      24
+23     60      44     40     54    55      40
+24     95      69     65     79    80      70
+25     55      40     50     50    90       8
+26     90      55     90     80   110      16
+27     75      85     20     30    40      12
+28    100     110     45     55    65      20
+29     47      52     40     40    41       8
+30     62      67     55     55    56      16
+31     92      87     75     85    76      26
+32     57      40     40     40    50      10
+33     72      57     55     55    65      18
+34    102      77     85     75    85      28
+35     45      48     60     65    35      12
+36     70      73     95     90    60      26
+37     41      40     50     65    65      12
+38     76      75     81    100   100      22
+39     45      20     45     25    20      10
+40     70      45     85     50    45      20
+41     45      35     30     40    55      16
+42     80      70     65     75    90      32
+43     50      55     75     65    30      10
+44     65      70     85     75    40      16
+45     80      85    110     90    50      24
+46     70      55     45     55    25       6
+47     95      80     60     80    30      20
+48     55      50     40     55    45      20
+49     65      60     90     75    90      30
+50     55      25     35     45    95       4
+51    100      50     50     70   120      14
+52     45      35     40     40    90       8
+53     70      60     65     65   115      20
+54     52      48     65     50    55      16
+55     82      78     95     80    85      34
+56     80      35     35     45    70      10
+57    105      60     60     70    95      20
+58     70      45     70     50    60      14
+59    110      80    100     80    95      38
+60     50      40     40     40    90      12
+61     65      65     50     50    90      20
+62     95      95     70     90    70      26
+63     20      15    105     55    90      18
+64     35      30    120     70   105      26
+65     50      45    135     95   120      30
+66     80      50     35     35    35      16
+67    100      70     50     60    45      30
+68    130      80     65     85    55      32
+69     75      35     70     30    40      14
+70     90      50     85     45    55      20
+71    105      65    100     70    70      34
+72     40      35     50    100    70      18
+73     70      65     80    120   100      32
+74     80     100     30     30    20       8
+75     95     115     45     45    35      20
+76    120     130     55     65    45      28
+ [ reached 'max' / getOption("max.print") -- omitted 814 rows ]
+> dados %>% 
++ +     mutate(
++  speed =2*speed
++ ) %>% head
+Error in mutate(speed = 2 * speed) : object 'speed' not found
+> dados %>% 
++     +      mutate(
++         +  speed =2*speed
+Error: unexpected '=' in:
+"    +      mutate(
+        +  speed ="
+> > dados %>% 
+Error: unexpected '>' in ">"
+> df <- mutate(dados, height2 = 2*height)%>%head
+> nrow(df)
+[1] 6
+> dados %>%
++     arrange(name) %>%
++     head()
+              name pokedex.id height weight    type secundary.type hp
+1        abomasnow        460     22   1355   grass            ice 90
+2             abra         63      9    195 psychic           None 25
+3            absol        359     12    470    dark           None 65
+4         accelgor        617      8    253     bug           None 80
+5 aegislash-shield        681     17    530   steel          ghost 60
+6       aerodactyl        142     18    590    rock         flying 80
+  attack defense sp.atk sp.def speed
+1     92      75     92     85    60
+2     20      15    105     55    90
+3    130      60     75     60    75
+4     70      40    100     60   145
+5     50     140     50    140    60
+6    105      65     60     75   130
+> 
+> dados %>%
++     arrange(name) %>%
++     tail()
+          name pokedex.id height weight   type secundary.type  hp attack
+885  zigzagoon        263      4    175 normal           None  38     30
+886    zoroark        571     16    811   dark           None  60    105
+887      zorua        570      7    125   dark           None  40     65
+888      zubat         41      8     75 poison         flying  40     45
+889   zweilous        634     14    500   dark         dragon  72     85
+890 zygarde-50        718     50   3050 dragon         ground 108    100
+    defense sp.atk sp.def speed
+885      41     30     41    60
+886      60    120     60   105
+887      40     80     40    65
+888      35     30     40    55
+889      70     65     70    58
+890     121     81     95    95
+> 
+> dados %>%
++     arrange(desc(name)) %>%
++     tail()
+                name pokedex.id height weight    type secundary.type hp
+885       aerodactyl        142     18    590    rock         flying 80
+886 aegislash-shield        681     17    530   steel          ghost 60
+887         accelgor        617      8    253     bug           None 80
+888            absol        359     12    470    dark           None 65
+889             abra         63      9    195 psychic           None 25
+890        abomasnow        460     22   1355   grass            ice 90
+    attack defense sp.atk sp.def speed
+885    105      65     60     75   130
+886     50     140     50    140    60
+887     70      40    100     60   145
+888    130      60     75     60    75
+889     20      15    105     55    90
+890     92      75     92     85    60
+> df <- data.frame(nome = c("maria","zé","joão","maria"), altura = C(2,3,4,1))
+Error in C(2, 3, 4, 1) : object not interpretable as a factor
+> df <- data.frame(nome = c("maria","zé","joão","maria"), altura = c(2,3,4,1))
+> View(df)
+> df %>%
++ arrange(name,altura)
+	
+nome
+altura
+1
+maria
+2
+2
+zé
+3
+3
+joão
+4
+4
+maria
+1
+ dados %>%
++     summarise(
++         media_altura = mean(height),
++         media_peso = mean(weight)
++     )
+  media_altura media_peso
+1     11.82135   629.8978
+> 
+> dados %>%
++     group_by(type) %>%
++     summarise(
++         media_altura = mean(height),
++         media_peso = mean(weight),
++         N = n()
++     ) %>%
++     arrange(media_altura)
+# A tibble: 18 × 4
+   type     media_altura media_peso     N
+   <chr>           <dbl>      <dbl> <int>
+ 1 fairy            8.38       255.    21
+ 2 bug              8.64       327.    75
+ 3 grass            9.21       327.    86
+ 4 electric         9.92       408.    48
+ 5 normal           9.97       438.   109
+ 6 psychic         10.5        532.    57
+ 7 flying          10.7        381.     7
+ 8 ghost           11.3        614.    30
+ 9 fire            11.7        606.    58
+10 ice             12.0        951.    27
+11 dark            12.5        616.    35
+12 fighting        12.7        617.    34
+13 water           12.7        523.   123
+14 ground          13.5       1232.    35
+15 rock            13.9       1200.    50
+16 poison          17.5        622.    35
+17 steel           18.2       2053.    30
+18 dragon          19.1        992.    30
+#TODO Filtrar os pokemons que tem o peso acima da média do seu type
+> dados %>%
++ group_by(type) %>%
++ mutate(media_altura = mean(height))
+# A tibble: 890 × 13
+# Groups:   type [18]
+   name       pokedex.id height weight type  secundary.type    hp attack
+   <chr>           <int>  <int>  <int> <chr> <chr>          <int>  <int>
+ 1 bulbasaur           1      7     69 grass poison            45     49
+ 2 ivysaur             2     10    130 grass poison            60     62
+ 3 venusaur            3     20   1000 grass poison            80     82
+ 4 charmander          4      6     85 fire  None              39     52
+ 5 charmeleon          5     11    190 fire  None              58     64
+ 6 charizard           6     17    905 fire  flying            78     84
+ 7 squirtle            7      5     90 water None              44     48
+ 8 wartortle           8     10    225 water None              59     63
+ 9 blastoise           9     16    855 water None              79     83
+10 caterpie           10      3     29 bug   None              45     30
+> dados %>%
++ group_by(type) %>%
++ mutate(media_altura = mean(height), media_peso = mean(weight)) %>%
++ filter(heigth > media_altura, weight > media_peso) %>%
++ select(-media_altura) %>%
++ mutate( imc = weight/height^2, mm = sum(weight))
+Error in `filter()`:
+? In argument: `heigth > media_altura`.
+? In group 1: `type = "bug"`.
+Caused by error:
+! object 'heigth' not found
+Run `rlang::last_trace()` to see where the error occurred.
+> dados %>%
++     mutate(
++         name2 = paste(name, " - NOVO")
++     ) %>% head
+        name pokedex.id height weight  type secundary.type hp attack
+1  bulbasaur          1      7     69 grass         poison 45     49
+2    ivysaur          2     10    130 grass         poison 60     62
+3   venusaur          3     20   1000 grass         poison 80     82
+4 charmander          4      6     85  fire           None 39     52
+5 charmeleon          5     11    190  fire           None 58     64
+6  charizard          6     17    905  fire         flying 78     84
+  defense sp.atk sp.def speed              name2
+1      49     65     65    45  bulbasaur  - NOVO
+2      63     80     80    60    ivysaur  - NOVO
+3      83    100    100    80   venusaur  - NOVO
+4      43     60     50    65 charmander  - NOVO
+5      58     80     65    80 charmeleon  - NOVO
+6      78    109     85   100  charizard  - NOVO
+> 
+ paste(dados$name, "- NOVO")
+  [1] "bulbasaur - NOVO"            "ivysaur - NOVO"             
+  [3] "venusaur - NOVO"             "charmander - NOVO"          
+  [5] "charmeleon - NOVO"           "charizard - NOVO"           
+  [7] "squirtle - NOVO"             "wartortle - NOVO"           
+  [9] "blastoise - NOVO"            "caterpie - NOVO"            
+ [11] "metapod - NOVO"              "butterfree - NOVO"          
+ [13] "weedle - NOVO"               "kakuna - NOVO"              
+ [15] "beedrill - NOVO"             "pidgey - NOVO"              
+ [17] "pidgeotto - NOVO"            "pidgeot - NOVO"             
+ [19] "rattata - NOVO"              "raticate - NOVO"            
+ [21] "spearow - NOVO"              "fearow - NOVO"              
+ [23] "ekans - NOVO"                "arbok - NOVO"               
+ [25] "pikachu - NOVO"              "raichu - NOVO"              
+ [27] "sandshrew - NOVO"            "sandslash - NOVO"           
+ [29] "nidoran-f - NOVO"            "nidorina - NOVO"            
+ [31] "nidoqueen - NOVO"            "nidoran-m - NOVO"           
+ [33] "nidorino - NOVO"             "nidoking - NOVO"            
+ [35] "clefairy - NOVO"             "clefable - NOVO"            
+ [37] "vulpix - NOVO"               "ninetales - NOVO"           
+ [39] "jigglypuff - NOVO"           "wigglytuff - NOVO"          
+ [41] "zubat - NOVO"                "golbat - NOVO"              
+ [43] "oddish - NOVO"               "gloom - NOVO"               
+ [45] "vileplume - NOVO"            "paras - NOVO"               
+ [47] "parasect - NOVO"             "venonat - NOVO"             
+ [49] "venomoth - NOVO"             "diglett - NOVO"             
+ [51] "dugtrio - NOVO"              "meowth - NOVO"              
+ [53] "persian - NOVO"              "psyduck - NOVO"             
+ [55] "golduck - NOVO"              "mankey - NOVO"              
+ [57] "primeape - NOVO"             "growlithe - NOVO"           
+ [59] "arcanine - NOVO"             "poliwag - NOVO"             
+ [61] "poliwhirl - NOVO"            "poliwrath - NOVO"           
+ [63] "abra - NOVO"                 "kadabra - NOVO"             
+ [65] "alakazam - NOVO"             "machop - NOVO"              
+ [67] "machoke - NOVO"              "machamp - NOVO"             
+ [69] "bellsprout - NOVO"           "weepinbell - NOVO"          
+ [71] "victreebel - NOVO"           "tentacool - NOVO"           
+ [73] "tentacruel - NOVO"           "geodude - NOVO"             
+ [75] "graveler - NOVO"             "golem - NOVO"               
+ [77] "ponyta - NOVO"               "rapidash - NOVO"            
+ [79] "slowpoke - NOVO"             "slowbro - NOVO"             
+ [81] "magnemite - NOVO"            "magneton - NOVO"            
+ [83] "farfetchd - NOVO"            "doduo - NOVO"               
+ [85] "dodrio - NOVO"               "seel - NOVO"                
+ [87] "dewgong - NOVO"              "grimer - NOVO"              
+ [89] "muk - NOVO"                  "shellder - NOVO"            
+ [91] "cloyster - NOVO"             "gastly - NOVO"              
+ [93] "haunter - NOVO"              "gengar - NOVO"              
+ [95] "onix - NOVO"                 "drowzee - NOVO"             
+ [97] "hypno - NOVO"                "krabby - NOVO"              
+ [99] "kingler - NOVO"              "voltorb - NOVO"             
+[101] "electrode - NOVO"            "exeggcute - NOVO"           
+[103] "exeggutor - NOVO"            "cubone - NOVO"              
+[105] "marowak - NOVO"              "hitmonlee - NOVO"           
+[107] "hitmonchan - NOVO"           "lickitung - NOVO"           
+[109] "koffing - NOVO"              "weezing - NOVO"             
+[111] "rhyhorn - NOVO"              "rhydon - NOVO"              
+[113] "chansey - NOVO"              "tangela - NOVO"             
+[115] "kangaskhan - NOVO"           "horsea - NOVO"              
+[117] "seadra - NOVO"               "goldeen - NOVO"             
+[119] "seaking - NOVO"              "staryu - NOVO"              
+[121] "starmie - NOVO"              "mr-mime - NOVO"             
+[123] "scyther - NOVO"              "jynx - NOVO"                
+[125] "electabuzz - NOVO"           "magmar - NOVO"              
+[127] "pinsir - NOVO"               "tauros - NOVO"              
+[129] "magikarp - NOVO"             "gyarados - NOVO"            
+[131] "lapras - NOVO"               "ditto - NOVO"               
+[133] "eevee - NOVO"                "vaporeon - NOVO"            
+[135] "jolteon - NOVO"              "flareon - NOVO"             
+[137] "porygon - NOVO"              "omanyte - NOVO"             
+[139] "omastar - NOVO"              "kabuto - NOVO"              
+[141] "kabutops - NOVO"             "aerodactyl - NOVO"          
+[143] "snorlax - NOVO"              "articuno - NOVO"            
+[145] "zapdos - NOVO"               "moltres - NOVO"             
+[147] "dratini - NOVO"              "dragonair - NOVO"           
+[149] "dragonite - NOVO"            "mewtwo - NOVO"              
+[151] "mew - NOVO"                  "chikorita - NOVO"           
+[153] "bayleef - NOVO"              "meganium - NOVO"            
+[155] "cyndaquil - NOVO"            "quilava - NOVO"             
+[157] "typhlosion - NOVO"           "totodile - NOVO"            
+[159] "croconaw - NOVO"             "feraligatr - NOVO"          
+[161] "sentret - NOVO"              "furret - NOVO"              
+[163] "hoothoot - NOVO"             "noctowl - NOVO"             
+[165] "ledyba - NOVO"               "ledian - NOVO"              
+[167] "spinarak - NOVO"             "ariados - NOVO"             
+[169] "crobat - NOVO"               "chinchou - NOVO"            
+[171] "lanturn - NOVO"              "pichu - NOVO"               
+[173] "cleffa - NOVO"               "igglybuff - NOVO"           
+[175] "togepi - NOVO"               "togetic - NOVO"             
+[177] "natu - NOVO"                 "xatu - NOVO"                
+[179] "mareep - NOVO"               "flaaffy - NOVO"             
+[181] "ampharos - NOVO"             "bellossom - NOVO"           
+[183] "marill - NOVO"               "azumarill - NOVO"           
+[185] "sudowoodo - NOVO"            "politoed - NOVO"            
+[187] "hoppip - NOVO"               "skiploom - NOVO"            
+[189] "jumpluff - NOVO"             "aipom - NOVO"               
+[191] "sunkern - NOVO"              "sunflora - NOVO"            
+[193] "yanma - NOVO"                "wooper - NOVO"              
+[195] "quagsire - NOVO"             "espeon - NOVO"              
+[197] "umbreon - NOVO"              "murkrow - NOVO"             
+[199] "slowking - NOVO"             "misdreavus - NOVO"          
+[201] "unown - NOVO"                "wobbuffet - NOVO"           
+[203] "girafarig - NOVO"            "pineco - NOVO"              
+[205] "forretress - NOVO"           "dunsparce - NOVO"           
+[207] "gligar - NOVO"               "steelix - NOVO"             
+[209] "snubbull - NOVO"             "granbull - NOVO"            
+[211] "qwilfish - NOVO"             "scizor - NOVO"              
+[213] "shuckle - NOVO"              "heracross - NOVO"           
+[215] "sneasel - NOVO"              "teddiursa - NOVO"           
+[217] "ursaring - NOVO"             "slugma - NOVO"              
+[219] "magcargo - NOVO"             "swinub - NOVO"              
+[221] "piloswine - NOVO"            "corsola - NOVO"             
+[223] "remoraid - NOVO"             "octillery - NOVO"           
+[225] "delibird - NOVO"             "mantine - NOVO"             
+[227] "skarmory - NOVO"             "houndour - NOVO"            
+[229] "houndoom - NOVO"             "kingdra - NOVO"             
+[231] "phanpy - NOVO"               "donphan - NOVO"             
+[233] "porygon2 - NOVO"             "stantler - NOVO"            
+[235] "smeargle - NOVO"             "tyrogue - NOVO"             
+[237] "hitmontop - NOVO"            "smoochum - NOVO"            
+[239] "elekid - NOVO"               "magby - NOVO"               
+[241] "miltank - NOVO"              "blissey - NOVO"             
+[243] "raikou - NOVO"               "entei - NOVO"               
+[245] "suicune - NOVO"              "larvitar - NOVO"            
+[247] "pupitar - NOVO"              "tyranitar - NOVO"           
+[249] "lugia - NOVO"                "ho-oh - NOVO"               
+[251] "celebi - NOVO"               "treecko - NOVO"             
+[253] "grovyle - NOVO"              "sceptile - NOVO"            
+[255] "torchic - NOVO"              "combusken - NOVO"           
+[257] "blaziken - NOVO"             "mudkip - NOVO"              
+[259] "marshtomp - NOVO"            "swampert - NOVO"            
+[261] "poochyena - NOVO"            "mightyena - NOVO"           
+[263] "zigzagoon - NOVO"            "linoone - NOVO"             
+[265] "wurmple - NOVO"              "silcoon - NOVO"             
+[267] "beautifly - NOVO"            "cascoon - NOVO"             
+[269] "dustox - NOVO"               "lotad - NOVO"               
+[271] "lombre - NOVO"               "ludicolo - NOVO"            
+[273] "seedot - NOVO"               "nuzleaf - NOVO"             
+[275] "shiftry - NOVO"              "taillow - NOVO"             
+[277] "swellow - NOVO"              "wingull - NOVO"             
+[279] "pelipper - NOVO"             "ralts - NOVO"               
+[281] "kirlia - NOVO"               "gardevoir - NOVO"           
+[283] "surskit - NOVO"              "masquerain - NOVO"          
+[285] "shroomish - NOVO"            "breloom - NOVO"             
+[287] "slakoth - NOVO"              "vigoroth - NOVO"            
+[289] "slaking - NOVO"              "nincada - NOVO"             
+[291] "ninjask - NOVO"              "shedinja - NOVO"            
+[293] "whismur - NOVO"              "loudred - NOVO"             
+[295] "exploud - NOVO"              "makuhita - NOVO"            
+[297] "hariyama - NOVO"             "azurill - NOVO"             
+[299] "nosepass - NOVO"             "skitty - NOVO"              
+[301] "delcatty - NOVO"             "sableye - NOVO"             
+[303] "mawile - NOVO"               "aron - NOVO"                
+[305] "lairon - NOVO"               "aggron - NOVO"              
+[307] "meditite - NOVO"             "medicham - NOVO"            
+[309] "electrike - NOVO"            "manectric - NOVO"           
+[311] "plusle - NOVO"               "minun - NOVO"               
+[313] "volbeat - NOVO"              "illumise - NOVO"            
+[315] "roselia - NOVO"              "gulpin - NOVO"              
+[317] "swalot - NOVO"               "carvanha - NOVO"            
+[319] "sharpedo - NOVO"             "wailmer - NOVO"             
+[321] "wailord - NOVO"              "numel - NOVO"               
+[323] "camerupt - NOVO"             "torkoal - NOVO"             
+[325] "spoink - NOVO"               "grumpig - NOVO"             
+[327] "spinda - NOVO"               "trapinch - NOVO"            
+[329] "vibrava - NOVO"              "flygon - NOVO"              
+[331] "cacnea - NOVO"               "cacturne - NOVO"            
+[333] "swablu - NOVO"               "altaria - NOVO"             
+[335] "zangoose - NOVO"             "seviper - NOVO"             
+[337] "lunatone - NOVO"             "solrock - NOVO"             
+[339] "barboach - NOVO"             "whiscash - NOVO"            
+[341] "corphish - NOVO"             "crawdaunt - NOVO"           
+[343] "baltoy - NOVO"               "claydol - NOVO"             
+[345] "lileep - NOVO"               "cradily - NOVO"             
+[347] "anorith - NOVO"              "armaldo - NOVO"             
+[349] "feebas - NOVO"               "milotic - NOVO"             
+[351] "castform - NOVO"             "kecleon - NOVO"             
+[353] "shuppet - NOVO"              "banette - NOVO"             
+[355] "duskull - NOVO"              "dusclops - NOVO"            
+[357] "tropius - NOVO"              "chimecho - NOVO"            
+[359] "absol - NOVO"                "wynaut - NOVO"              
+[361] "snorunt - NOVO"              "glalie - NOVO"              
+[363] "spheal - NOVO"               "sealeo - NOVO"              
+[365] "walrein - NOVO"              "clamperl - NOVO"            
+[367] "huntail - NOVO"              "gorebyss - NOVO"            
+[369] "relicanth - NOVO"            "luvdisc - NOVO"             
+[371] "bagon - NOVO"                "shelgon - NOVO"             
+[373] "salamence - NOVO"            "beldum - NOVO"              
+[375] "metang - NOVO"               "metagross - NOVO"           
+[377] "regirock - NOVO"             "regice - NOVO"              
+[379] "registeel - NOVO"            "latias - NOVO"              
+[381] "latios - NOVO"               "kyogre - NOVO"              
+[383] "groudon - NOVO"              "rayquaza - NOVO"            
+[385] "jirachi - NOVO"              "deoxys-normal - NOVO"       
+[387] "turtwig - NOVO"              "grotle - NOVO"              
+[389] "torterra - NOVO"             "chimchar - NOVO"            
+[391] "monferno - NOVO"             "infernape - NOVO"           
+[393] "piplup - NOVO"               "prinplup - NOVO"            
+[395] "empoleon - NOVO"             "starly - NOVO"              
+[397] "staravia - NOVO"             "staraptor - NOVO"           
+[399] "bidoof - NOVO"               "bibarel - NOVO"             
+[401] "kricketot - NOVO"            "kricketune - NOVO"          
+[403] "shinx - NOVO"                "luxio - NOVO"               
+[405] "luxray - NOVO"               "budew - NOVO"               
+[407] "roserade - NOVO"             "cranidos - NOVO"            
+[409] "rampardos - NOVO"            "shieldon - NOVO"            
+[411] "bastiodon - NOVO"            "burmy - NOVO"               
+[413] "wormadam-plant - NOVO"       "mothim - NOVO"              
+[415] "combee - NOVO"               "vespiquen - NOVO"           
+[417] "pachirisu - NOVO"            "buizel - NOVO"              
+[419] "floatzel - NOVO"             "cherubi - NOVO"             
+[421] "cherrim - NOVO"              "shellos - NOVO"             
+[423] "gastrodon - NOVO"            "ambipom - NOVO"             
+[425] "drifloon - NOVO"             "drifblim - NOVO"            
+[427] "buneary - NOVO"              "lopunny - NOVO"             
+[429] "mismagius - NOVO"            "honchkrow - NOVO"           
+[431] "glameow - NOVO"              "purugly - NOVO"             
+[433] "chingling - NOVO"            "stunky - NOVO"              
+[435] "skuntank - NOVO"             "bronzor - NOVO"             
+[437] "bronzong - NOVO"             "bonsly - NOVO"              
+[439] "mime-jr - NOVO"              "happiny - NOVO"             
+[441] "chatot - NOVO"               "spiritomb - NOVO"           
+[443] "gible - NOVO"                "gabite - NOVO"              
+[445] "garchomp - NOVO"             "munchlax - NOVO"            
+[447] "riolu - NOVO"                "lucario - NOVO"             
+[449] "hippopotas - NOVO"           "hippowdon - NOVO"           
+[451] "skorupi - NOVO"              "drapion - NOVO"             
+[453] "croagunk - NOVO"             "toxicroak - NOVO"           
+[455] "carnivine - NOVO"            "finneon - NOVO"             
+[457] "lumineon - NOVO"             "mantyke - NOVO"             
+[459] "snover - NOVO"               "abomasnow - NOVO"           
+[461] "weavile - NOVO"              "magnezone - NOVO"           
+[463] "lickilicky - NOVO"           "rhyperior - NOVO"           
+[465] "tangrowth - NOVO"            "electivire - NOVO"          
+[467] "magmortar - NOVO"            "togekiss - NOVO"            
+[469] "yanmega - NOVO"              "leafeon - NOVO"             
+[471] "glaceon - NOVO"              "gliscor - NOVO"             
+[473] "mamoswine - NOVO"            "porygon-z - NOVO"           
+[475] "gallade - NOVO"              "probopass - NOVO"           
+[477] "dusknoir - NOVO"             "froslass - NOVO"            
+[479] "rotom - NOVO"                "uxie - NOVO"                
+[481] "mesprit - NOVO"              "azelf - NOVO"               
+[483] "dialga - NOVO"               "palkia - NOVO"              
+[485] "heatran - NOVO"              "regigigas - NOVO"           
+[487] "giratina-altered - NOVO"     "cresselia - NOVO"           
+[489] "phione - NOVO"               "manaphy - NOVO"             
+[491] "darkrai - NOVO"              "shaymin-land - NOVO"        
+[493] "arceus - NOVO"               "victini - NOVO"             
+[495] "snivy - NOVO"                "servine - NOVO"             
+[497] "serperior - NOVO"            "tepig - NOVO"               
+[499] "pignite - NOVO"              "emboar - NOVO"              
+[501] "oshawott - NOVO"             "dewott - NOVO"              
+[503] "samurott - NOVO"             "patrat - NOVO"              
+[505] "watchog - NOVO"              "lillipup - NOVO"            
+[507] "herdier - NOVO"              "stoutland - NOVO"           
+[509] "purrloin - NOVO"             "liepard - NOVO"             
+[511] "pansage - NOVO"              "simisage - NOVO"            
+[513] "pansear - NOVO"              "simisear - NOVO"            
+[515] "panpour - NOVO"              "simipour - NOVO"            
+[517] "munna - NOVO"                "musharna - NOVO"            
+[519] "pidove - NOVO"               "tranquill - NOVO"           
+[521] "unfezant - NOVO"             "blitzle - NOVO"             
+[523] "zebstrika - NOVO"            "roggenrola - NOVO"          
+[525] "boldore - NOVO"              "gigalith - NOVO"            
+[527] "woobat - NOVO"               "swoobat - NOVO"             
+[529] "drilbur - NOVO"              "excadrill - NOVO"           
+[531] "audino - NOVO"               "timburr - NOVO"             
+[533] "gurdurr - NOVO"              "conkeldurr - NOVO"          
+[535] "tympole - NOVO"              "palpitoad - NOVO"           
+[537] "seismitoad - NOVO"           "throh - NOVO"               
+[539] "sawk - NOVO"                 "sewaddle - NOVO"            
+[541] "swadloon - NOVO"             "leavanny - NOVO"            
+[543] "venipede - NOVO"             "whirlipede - NOVO"          
+[545] "scolipede - NOVO"            "cottonee - NOVO"            
+[547] "whimsicott - NOVO"           "petilil - NOVO"             
+[549] "lilligant - NOVO"            "basculin-red-striped - NOVO"
+[551] "sandile - NOVO"              "krokorok - NOVO"            
+[553] "krookodile - NOVO"           "darumaka - NOVO"            
+[555] "darmanitan-standard - NOVO"  "maractus - NOVO"            
+[557] "dwebble - NOVO"              "crustle - NOVO"             
+[559] "scraggy - NOVO"              "scrafty - NOVO"             
+[561] "sigilyph - NOVO"             "yamask - NOVO"              
+[563] "cofagrigus - NOVO"           "tirtouga - NOVO"            
+[565] "carracosta - NOVO"           "archen - NOVO"              
+[567] "archeops - NOVO"             "trubbish - NOVO"            
+[569] "garbodor - NOVO"             "zorua - NOVO"               
+[571] "zoroark - NOVO"              "minccino - NOVO"            
+[573] "cinccino - NOVO"             "gothita - NOVO"             
+[575] "gothorita - NOVO"            "gothitelle - NOVO"          
+[577] "solosis - NOVO"              "duosion - NOVO"             
+[579] "reuniclus - NOVO"            "ducklett - NOVO"            
+[581] "swanna - NOVO"               "vanillite - NOVO"           
+[583] "vanillish - NOVO"            "vanilluxe - NOVO"           
+[585] "deerling - NOVO"             "sawsbuck - NOVO"            
+[587] "emolga - NOVO"               "karrablast - NOVO"          
+[589] "escavalier - NOVO"           "foongus - NOVO"             
+[591] "amoonguss - NOVO"            "frillish - NOVO"            
+[593] "jellicent - NOVO"            "alomomola - NOVO"           
+[595] "joltik - NOVO"               "galvantula - NOVO"          
+[597] "ferroseed - NOVO"            "ferrothorn - NOVO"          
+[599] "klink - NOVO"                "klang - NOVO"               
+[601] "klinklang - NOVO"            "tynamo - NOVO"              
+[603] "eelektrik - NOVO"            "eelektross - NOVO"          
+[605] "elgyem - NOVO"               "beheeyem - NOVO"            
+[607] "litwick - NOVO"              "lampent - NOVO"             
+[609] "chandelure - NOVO"           "axew - NOVO"                
+[611] "fraxure - NOVO"              "haxorus - NOVO"             
+[613] "cubchoo - NOVO"              "beartic - NOVO"             
+[615] "cryogonal - NOVO"            "shelmet - NOVO"             
+[617] "accelgor - NOVO"             "stunfisk - NOVO"            
+[619] "mienfoo - NOVO"              "mienshao - NOVO"            
+[621] "druddigon - NOVO"            "golett - NOVO"              
+[623] "golurk - NOVO"               "pawniard - NOVO"            
+[625] "bisharp - NOVO"              "bouffalant - NOVO"          
+[627] "rufflet - NOVO"              "braviary - NOVO"            
+[629] "vullaby - NOVO"              "mandibuzz - NOVO"           
+[631] "heatmor - NOVO"              "durant - NOVO"              
+[633] "deino - NOVO"                "zweilous - NOVO"            
+[635] "hydreigon - NOVO"            "larvesta - NOVO"            
+[637] "volcarona - NOVO"            "cobalion - NOVO"            
+[639] "terrakion - NOVO"            "virizion - NOVO"            
+[641] "tornadus-incarnate - NOVO"   "thundurus-incarnate - NOVO" 
+[643] "reshiram - NOVO"             "zekrom - NOVO"              
+[645] "landorus-incarnate - NOVO"   "kyurem - NOVO"              
+[647] "keldeo-ordinary - NOVO"      "meloetta-aria - NOVO"       
+[649] "genesect - NOVO"             "chespin - NOVO"             
+[651] "quilladin - NOVO"            "chesnaught - NOVO"          
+[653] "fennekin - NOVO"             "braixen - NOVO"             
+[655] "delphox - NOVO"              "froakie - NOVO"             
+[657] "frogadier - NOVO"            "greninja - NOVO"            
+[659] "bunnelby - NOVO"             "diggersby - NOVO"           
+[661] "fletchling - NOVO"           "fletchinder - NOVO"         
+[663] "talonflame - NOVO"           "scatterbug - NOVO"          
+[665] "spewpa - NOVO"               "vivillon - NOVO"            
+[667] "litleo - NOVO"               "pyroar - NOVO"              
+[669] "flabebe - NOVO"              "floette - NOVO"             
+[671] "florges - NOVO"              "skiddo - NOVO"              
+[673] "gogoat - NOVO"               "pancham - NOVO"             
+[675] "pangoro - NOVO"              "furfrou - NOVO"             
+[677] "espurr - NOVO"               "meowstic-male - NOVO"       
+[679] "honedge - NOVO"              "doublade - NOVO"            
+[681] "aegislash-shield - NOVO"     "spritzee - NOVO"            
+[683] "aromatisse - NOVO"           "swirlix - NOVO"             
+[685] "slurpuff - NOVO"             "inkay - NOVO"               
+[687] "malamar - NOVO"              "binacle - NOVO"             
+[689] "barbaracle - NOVO"           "skrelp - NOVO"              
+[691] "dragalge - NOVO"             "clauncher - NOVO"           
+[693] "clawitzer - NOVO"            "helioptile - NOVO"          
+[695] "heliolisk - NOVO"            "tyrunt - NOVO"              
+[697] "tyrantrum - NOVO"            "amaura - NOVO"              
+[699] "aurorus - NOVO"              "sylveon - NOVO"             
+[701] "hawlucha - NOVO"             "dedenne - NOVO"             
+[703] "carbink - NOVO"              "goomy - NOVO"               
+[705] "sliggoo - NOVO"              "goodra - NOVO"              
+[707] "klefki - NOVO"               "phantump - NOVO"            
+[709] "trevenant - NOVO"            "pumpkaboo-average - NOVO"   
+[711] "gourgeist-average - NOVO"    "bergmite - NOVO"            
+[713] "avalugg - NOVO"              "noibat - NOVO"              
+[715] "noivern - NOVO"              "xerneas - NOVO"             
+[717] "yveltal - NOVO"              "zygarde-50 - NOVO"          
+[719] "diancie - NOVO"              "hoopa - NOVO"               
+[721] "volcanion - NOVO"            "rowlet - NOVO"              
+[723] "dartrix - NOVO"              "decidueye - NOVO"           
+[725] "litten - NOVO"               "torracat - NOVO"            
+[727] "incineroar - NOVO"           "popplio - NOVO"             
+[729] "brionne - NOVO"              "primarina - NOVO"           
+[731] "pikipek - NOVO"              "trumbeak - NOVO"            
+[733] "toucannon - NOVO"            "yungoos - NOVO"             
+[735] "gumshoos - NOVO"             "grubbin - NOVO"             
+[737] "charjabug - NOVO"            "vikavolt - NOVO"            
+[739] "crabrawler - NOVO"           "crabominable - NOVO"        
+[741] "oricorio-baile - NOVO"       "cutiefly - NOVO"            
+[743] "ribombee - NOVO"             "rockruff - NOVO"            
+[745] "lycanroc-midday - NOVO"      "wishiwashi-solo - NOVO"     
+[747] "mareanie - NOVO"             "toxapex - NOVO"             
+[749] "mudbray - NOVO"              "mudsdale - NOVO"            
+[751] "dewpider - NOVO"             "araquanid - NOVO"           
+[753] "fomantis - NOVO"             "lurantis - NOVO"            
+[755] "morelull - NOVO"             "shiinotic - NOVO"           
+[757] "salandit - NOVO"             "salazzle - NOVO"            
+[759] "stufful - NOVO"              "bewear - NOVO"              
+[761] "bounsweet - NOVO"            "steenee - NOVO"             
+[763] "tsareena - NOVO"             "comfey - NOVO"              
+[765] "oranguru - NOVO"             "passimian - NOVO"           
+[767] "wimpod - NOVO"               "golisopod - NOVO"           
+[769] "sandygast - NOVO"            "palossand - NOVO"           
+[771] "pyukumuku - NOVO"            "type-null - NOVO"           
+[773] "silvally - NOVO"             "minior-red-meteor - NOVO"   
+[775] "komala - NOVO"               "turtonator - NOVO"          
+[777] "togedemaru - NOVO"           "mimikyu-disguised - NOVO"   
+[779] "bruxish - NOVO"              "drampa - NOVO"              
+[781] "dhelmise - NOVO"             "jangmo-o - NOVO"            
+[783] "hakamo-o - NOVO"             "kommo-o - NOVO"             
+[785] "tapu-koko - NOVO"            "tapu-lele - NOVO"           
+[787] "tapu-bulu - NOVO"            "tapu-fini - NOVO"           
+[789] "cosmog - NOVO"               "cosmoem - NOVO"             
+[791] "solgaleo - NOVO"             "lunala - NOVO"              
+[793] "nihilego - NOVO"             "buzzwole - NOVO"            
+[795] "pheromosa - NOVO"            "xurkitree - NOVO"           
+[797] "celesteela - NOVO"           "kartana - NOVO"             
+[799] "guzzlord - NOVO"             "necrozma - NOVO"            
+[801] "magearna - NOVO"             "marshadow - NOVO"           
+[803] "poipole - NOVO"              "naganadel - NOVO"           
+[805] "stakataka - NOVO"            "blacephalon - NOVO"         
+[807] "zeraora - NOVO"              "meltan - NOVO"              
+[809] "melmetal - NOVO"             "grookey - NOVO"             
+[811] "thwackey - NOVO"             "rillaboom - NOVO"           
+[813] "scorbunny - NOVO"            "raboot - NOVO"              
+[815] "cinderace - NOVO"            "sobble - NOVO"              
+[817] "drizzile - NOVO"             "inteleon - NOVO"            
+[819] "skwovet - NOVO"              "greedent - NOVO"            
+[821] "rookidee - NOVO"             "corvisquire - NOVO"         
+[823] "corviknight - NOVO"          "blipbug - NOVO"             
+[825] "dottler - NOVO"              "orbeetle - NOVO"            
+[827] "nickit - NOVO"               "thievul - NOVO"             
+[829] "gossifleur - NOVO"           "eldegoss - NOVO"            
+[831] "wooloo - NOVO"               "dubwool - NOVO"             
+[833] "chewtle - NOVO"              "drednaw - NOVO"             
+[835] "yamper - NOVO"               "boltund - NOVO"             
+[837] "rolycoly - NOVO"             "carkol - NOVO"              
+[839] "coalossal - NOVO"            "applin - NOVO"              
+[841] "flapple - NOVO"              "appletun - NOVO"            
+[843] "silicobra - NOVO"            "sandaconda - NOVO"          
+[845] "cramorant - NOVO"            "arrokuda - NOVO"            
+[847] "barraskewda - NOVO"          "toxel - NOVO"               
+[849] "toxtricity-amped - NOVO"     "sizzlipede - NOVO"          
+[851] "centiskorch - NOVO"          "clobbopus - NOVO"           
+[853] "grapploct - NOVO"            "sinistea - NOVO"            
+[855] "polteageist - NOVO"          "hatenna - NOVO"             
+[857] "hattrem - NOVO"              "hatterene - NOVO"           
+[859] "impidimp - NOVO"             "morgrem - NOVO"             
+[861] "grimmsnarl - NOVO"           "obstagoon - NOVO"           
+[863] "perrserker - NOVO"           "cursola - NOVO"             
+[865] "sirfetchd - NOVO"            "mr-rime - NOVO"             
+[867] "runerigus - NOVO"            "milcery - NOVO"             
+[869] "alcremie - NOVO"             "falinks - NOVO"             
+[871] "pincurchin - NOVO"           "snom - NOVO"                
+[873] "frosmoth - NOVO"             "stonjourner - NOVO"         
+[875] "eiscue-ice - NOVO"           "indeedee-male - NOVO"       
+[877] "morpeko-full-belly - NOVO"   "cufant - NOVO"              
+[879] "copperajah - NOVO"           "dracozolt - NOVO"           
+[881] "arctozolt - NOVO"            "dracovish - NOVO"           
+[883] "arctovish - NOVO"            "duraludon - NOVO"           
+[885] "dreepy - NOVO"               "drakloak - NOVO"            
+[887] "dragapult - NOVO"            "zacian - NOVO"              
+[889] "zamazenta - NOVO"            "eternatus - NOVO"           
+> f <- function(x){
++     if(x <= 15){ #? no caso, o valor é 300
++         return("Executei essa ação")
++     }else{
++         
++         return("Executei Aquela ação")
++     }
++ }
+> 
+> f(10)
+[1] "Executei essa ação"
+> dados %>%
++ rowwise() %>%
++ mutate ( nova_var = f(height)) %>%
++ select(height, nova_var) %>% head(30)
+# A tibble: 30 × 2
+# Rowwise: 
+   height nova_var            
+    <int> <chr>               
+ 1      7 Executei essa ação  
+ 2     10 Executei essa ação  
+ 3     20 Executei Aquela ação
+ 4      6 Executei essa ação  
+ 5     11 Executei essa ação  
+ 6     17 Executei Aquela ação
+ 7      5 Executei essa ação  
+ 8     10 Executei essa ação  
+ 9     16 Executei Aquela ação
+10      3 Executei essa ação  
+# ? 20 more rows
+# ? Use `print(n = ...)` to see more rows
+ATIVIDADE DA SEMANA 
+dados %>%
++     group_by(type) %>%
++     summarise(
++         media_altura = mean(height),
++         N = n()
++     ) %>%
++     arrange(media_altura)
+# A tibble: 18 × 3
+   type     media_altura     N
+   <chr>           <dbl> <int>
+ 1 fairy            8.38    21
+ 2 bug              8.64    75
+ 3 grass            9.21    86
+ 4 electric         9.92    48
+ 5 normal           9.97   109
+ 6 psychic         10.5     57
+ 7 flying          10.7      7
+ 8 ghost           11.3     30
+ 9 fire            11.7     58
+10 ice             12.0     27
+11 dark            12.5     35
+12 fighting        12.7     34
+13 water           12.7    123
+14 ground          13.5     35
+15 rock            13.9     50
+16 poison          17.5     35
+17 steel           18.2     30
+18 dragon          19.1     30
